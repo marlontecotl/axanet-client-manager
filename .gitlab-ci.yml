@@ -6,18 +6,18 @@ new_client:
   script:
     - echo "🚀 NEW CLIENT CREATED: Juan Perez. Notifying team: mtecotl, user1_gitlab, user2_gitlab."
   when: manual
-  tags: []
+  allow_failure: false
 
 update_client:
   stage: simulate_action
   script:
     - echo "🛠️ CLIENT UPDATED: Ana Garcia. Notifying team: mtecotl, user1_gitlab, user2_gitlab."
   when: manual
-  tags: []
+  allow_failure: false
 
 query_client:
   stage: simulate_action
   script:
     - echo "📄 CLIENT QUERY: Mario Lopez. Notifying team: mtecotl, user1_gitlab, user2_gitlab."
   when: manual
-  tags: []
+  allow_failure: false
