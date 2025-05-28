@@ -1,25 +1,29 @@
 image: python:3.10
 
+workflow:
+  rules:
+    - when: always
+
 stages:
   - simulate_action
 
 new_client:
   stage: simulate_action
   script:
-    - echo "🚀 NEW CLIENT CREATED: Juan Perez. Notifying team: mtecotl, user1_gitlab, user2_gitlab."
+    - echo "NEW CLIENT CREATED: Juan Perez. Notifying team: marlontecotl, user1_gitlab, user2_gitlab."
   when: manual
   allow_failure: false
 
 update_client:
   stage: simulate_action
   script:
-    - echo "🛠️ CLIENT UPDATED: Ana Garcia. Notifying team: mtecotl, user1_gitlab, user2_gitlab."
+    - echo "CLIENT UPDATED: Ana Garcia. Notifying team: marlontecotl, user1_gitlab, user2_gitlab."
   when: manual
   allow_failure: false
 
 query_client:
   stage: simulate_action
   script:
-    - echo "📄 CLIENT QUERY: Mario Lopez. Notifying team: mtecotl, user1_gitlab, user2_gitlab."
+    - echo "CLIENT QUERY: Mario Lopez. Notifying team: marlontecotl, user1_gitlab, user2_gitlab."
   when: manual
   allow_failure: false
