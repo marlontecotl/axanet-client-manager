@@ -1,0 +1,36 @@
+# Ignorar entorno virtual
+env/
+env_axanet/
+venv/
+.venv/
+
+# Ignorar cachés de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignorar logs
+*.log
+
+# Ignorar paquetes de instalación
+*.egg-info/
+dist/
+build/
+
+# Ignorar archivos de testing o cobertura
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Ignorar archivos de configuración locales
+*.env
+.env.*
+
+# Ignorar carpeta donde se guardan los archivos de clientes
+axanet_clients_data/
+
+# Ignorar archivos de sistema operativo
+.DS_Store
+Thumbs.db

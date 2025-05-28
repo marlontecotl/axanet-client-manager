@@ -1,0 +1,23 @@
+stages:
+  - notify
+
+nuevo_cliente:
+  stage: notify
+  script:
+    - echo "✅ NEW CLIENT CREATED: John Doe. Notifying team: mtecotl, user1_gitlab, user2_gitlab."
+  when: manual
+  tags: []
+
+actualizar_cliente:
+  stage: notify
+  script:
+    - echo "🔄 CLIENT UPDATED: Ana García. Notifying team: mtecotl, user1_gitlab, user2_gitlab."
+  when: manual
+  tags: []
+
+consultar_cliente:
+  stage: notify
+  script:
+    - echo "🔍 CLIENT CONSULTED: Mario López. Notifying team: mtecotl, user1_gitlab, user2_gitlab."
+  when: manual
+  tags: []

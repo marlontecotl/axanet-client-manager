@@ -1,0 +1,75 @@
+Axanet Client Manager – Pseudocode
+----------------------------------
+
+Function: normalize_name(client_name)
+    - Convert client_name to lowercase
+    - Replace spaces with underscores
+    - Return normalized name
+
+Function: generate_client_id(client_name)
+    - Extract initials from client_name
+    - Get current timestamp in format YYYYMMDDHHMMSS
+    - Concatenate initials and timestamp
+    - Return as client ID
+
+Function: ensure_base_directory()
+    - If client directory does not exist
+        - Create directory
+    - Handle errors during creation
+
+Function: load_clients()
+    - Clear current client file map
+    - For each .txt file in the directory:
+        - Normalize file name (remove .txt)
+        - Map normalized name to file path
+
+Function: create_client()
+    - Prompt user for client name, phone, email, and first service
+    - Normalize name
+    - If client already exists:
+        - Print error and return
+    - Generate client ID and current date
+    - Create a new file with client details
+    - Append client to in-memory dictionary
+    - Confirm creation to the user
+
+Function: view_client()
+    - Ask user if they want to search by name or list all clients
+    - If searching by name:
+        - Normalize name
+        - Check if file exists
+        - If not, show error
+        - Else, display file content
+    - If listing:
+        - Show all normalized client names in a friendly format
+
+Function: update_client()
+    - Prompt for client name
+    - Normalize name and get file path
+    - If client not found, show error
+    - Ask for new service description
+    - Append new service with date to client file
+
+Function: delete_client()
+    - Prompt for client name
+    - Normalize name and get file path
+    - If client not found, show error
+    - Ask for confirmation
+    - If confirmed, delete file and remove from dictionary
+
+Function: display_menu()
+    - Print options:
+        1. Create new client
+        2. View client
+        3. Update client
+        4. Delete client
+        5. Exit
+
+Function: main()
+    - Call ensure_base_directory()
+    - Call load_clients()
+    - Loop:
+        - Show menu
+        - Get user input
+        - Execute corresponding function
+        - Handle KeyboardInterrupt and general errors gracefully
