@@ -9,21 +9,14 @@ stages:
 
 new_client:
   stage: simulate_action
-  script:
-    - echo "NEW CLIENT CREATED: Juan Perez. Notifying team: marlontecotl, user1_gitlab, user2_gitlab."
   when: manual
   allow_failure: false
 
 update_client:
   stage: simulate_action
-  script:
-    - echo "CLIENT UPDATED: Ana Garcia. Notifying team: marlontecotl, user1_gitlab, user2_gitlab."
-  when: manual
   allow_failure: false
 
 query_client:
   stage: simulate_action
-  script:
-    - echo "CLIENT QUERY: Mario Lopez. Notifying team: marlontecotl, user1_gitlab, user2_gitlab."
   when: manual
   allow_failure: false
