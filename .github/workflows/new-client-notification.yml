@@ -1,0 +1,22 @@
+name: New Client Notification
+
+on:
+  workflow_dispatch:
+    inputs:
+      client_name:
+        description: 'Nombre del Nuevo Cliente'
+        required: true
+        default: 'Cliente de Prueba'
+      client_id:
+        description: 'ID del Nuevo Cliente'
+        required: true
+        default: 'test001'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Notification
+        run: |
+          echo "[NUEVO CLIENTE CREADO (Simulado)] Nombre: ${{ github.event.inputs.client_name }}, ID: ${{ github.event.inputs.client_id }}. Notificando a DevTeam, ITTeam, CustServTeam."
+          echo "Este mensaje aparecería en los logs de GitHub Actions, simulando una notificación."
