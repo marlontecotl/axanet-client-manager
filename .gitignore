@@ -27,6 +27,7 @@ htmlcov/
 # Ignorar archivos de configuración locales
 *.env
 .env.*
+*.pem
 
 # Ignorar carpeta donde se guardan los archivos de clientes
 axanet_clients_data/
